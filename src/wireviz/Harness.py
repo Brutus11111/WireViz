@@ -681,7 +681,7 @@ class Harness:
                 _filename = f"{filename}.tmp" if f == "svg" else filename
                 # TODO: prevent rendering SVG twice when both SVG and HTML are specified
                 graph.format = f
-                graph.render(filename=_filename, view=view, cleanup=cleanup)
+                graph.render(filename=_filename, view=view)
         # embed images into SVG output
         if "svg" in fmt or "html" in fmt:
             embed_svg_images_file(f"{filename}.tmp.svg")
